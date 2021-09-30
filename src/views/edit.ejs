@@ -1,0 +1,34 @@
+<%- include('partials/_header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5  offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/<%= task._id %>" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre mascota" class="form-control my-1" value="<%= task.nombre %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="raza" placeholder="Raza" class="form-control my-1" value="<%= task.raza %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="edad" placeholder="Edad" class="form-control my-1" value="<%= task.edad %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="foto" placeholder="Foto" class="form-control my-1" value="<%= task.foto %>">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="perfil" cols="80" placeholder="Perfil" class="form-control my-1"> <%= task.perfil %> </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-control my-2">
+                               Actualizar 
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>

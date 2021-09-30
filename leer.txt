@@ -1,0 +1,25 @@
+::: Modulos instalados para la app:::
+npm install express mongoose ejs morgan
+npm i nodemon
+
+src: se guarda todo el proyecto
+src/views: archivos jes que el nvegador puede ver
+src/routes:rutas
+src/models: los archivos de como lucen los datos dentros de la base de datos
+
+REQUISITOS: 
+
+Tener instalado node js.
+con el comando node -v en el terminal podemos ver si esta
+
+Tener instalado mongoDb.
+Abrir otra terminal e digitar "mongo".
+
+El programa se inicia con el comando "npm run dev" en la consola, luego debe aparecer un mensaje que diga:
+
+Servidor en puerto 3000
+Conectdo a la base de datos
+
+Con esto se abre un navegador y se escribe: localhost:3000 ( u otro puerto que indique)
+
+Las imagenes solo funcionan con url, buscar en google y pegar un url de una imagen
