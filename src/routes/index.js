@@ -4,6 +4,16 @@ const router = express.Router();
 const Task= require('../models/task')
 
 //Leer desde la base de datos
+router.get('/admin', async (req, res)=> {
+    const tasks = await Task.find();
+    //console.log(tasks);
+    res.render('admin', {
+    tasks //tasks: tasks
+    });
+})
+
+
+
 router.get('/', async (req, res)=> {
     const tasks = await Task.find();
     //console.log(tasks);
