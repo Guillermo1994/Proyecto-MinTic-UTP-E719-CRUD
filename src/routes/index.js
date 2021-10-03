@@ -13,7 +13,7 @@ router.get('/', async (req, res)=> {
 })
 
 //ruta para index 1
-router.get('/src/views/index1.ejs', async (req, res)=> {
+router.get('/src/views/index.ejs', async (req, res)=> {
     const tasks = await Task.find();
     //console.log(tasks);
     res.render('index', {
