@@ -23,7 +23,7 @@ router.get('/src/views/index.ejs', async (req, res)=> {
 })
 
 //ruta a admin
-router.get('/src/views/admin.ejs', async (req, res)=> {
+router.get('/admin', async (req, res)=> {
     const tasks = await Task.find();
     //console.log(tasks);
     res.render('admin', {
@@ -44,7 +44,7 @@ router.get('/turn/:id', async (req, res) => {
     const {id} = req.params;
     const task= await Task.findById(id);
     task.status = !task.status;
-    res.redirect('/');
+    res.redirect('/admin');
     await task.save();
     //console.log(task);
     //res.send('Receidved!')
@@ -62,13 +62,13 @@ router.get('/edit/:id', async (req, res) => {
 router.post('/edit/:id', async (req, res) => {
     const {id} = req.params;
     await Task.updateOne({_id: id}, req.body);
-    res.redirect('/');
+    res.redirect('/admin');
 })
 //Borrar
 router.get('/delete/:id', async (req, res) => {
     const {id} = req.params;
     await Task.remove({_id: id});
-    res.redirect('/');
+    res.redirect('/admin');
     //console.log(req.params.id)
     //res.send('received!');
 });
