@@ -12,6 +12,23 @@ router.get('/', async (req, res)=> {
     });
 })
 
+//ruta para index 1
+router.get('/src/views/index1.ejs', async (req, res)=> {
+    const tasks = await Task.find();
+    //console.log(tasks);
+    res.render('index', {
+    tasks //tasks: tasks
+    });
+})
+//ruta a admin
+router.get('/src/views/admin.ejs', async (req, res)=> {
+    const tasks = await Task.find();
+    //console.log(tasks);
+    res.render('admin', {
+    tasks //tasks: tasks
+    });
+})
+
 //Guardar en base de datos
 router.post('/add', async (req, res)=> { //Recibiendo los datos que vienen desde el formulario
 const task = new Task(req.body);
