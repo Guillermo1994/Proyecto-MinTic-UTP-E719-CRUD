@@ -12,6 +12,7 @@ router.get('/', async (req, res)=> {
     });
 })
 
+
 //ruta para index 1
 router.get('/src/views/index.ejs', async (req, res)=> {
     const tasks = await Task.find();
@@ -20,6 +21,7 @@ router.get('/src/views/index.ejs', async (req, res)=> {
     tasks //tasks: tasks
     });
 })
+
 //ruta a admin
 router.get('/src/views/admin.ejs', async (req, res)=> {
     const tasks = await Task.find();
