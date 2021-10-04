@@ -31,6 +31,15 @@ router.get('/admin', async (req, res)=> {
     });
 })
 
+//ruta a Contactenos
+router.get('/contactenos', async (req, res)=> {
+    const tasks = await Task.find();
+    res.render('contactenos', {
+    tasks //tasks: tasks
+    });
+})
+
+
 //Guardar en base de datos
 router.post('/add', async (req, res)=> { //Recibiendo los datos que vienen desde el formulario
 const task = new Task(req.body);

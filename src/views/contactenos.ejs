@@ -1,0 +1,50 @@
+    <%- include('partials/_header') %> <!--Importa el layout header desde partials-->
+      <section>
+        <div class="container-xxl border-radius-x green-bg my-4">
+          <div class="row align-items-start" style="padding: 5%;">
+            <div class="col">
+              <h3 class="text-center">Contactate con nosotros</h3>
+              <p class="fs-6 p-3">
+                Es nuestra misión contribuir al bienestar de las mascotas, buscar un hogar digno a cada uno de los animales y ayudar al bienestar tanto de ellos, como de las personas que los llevan y adoptan en su hogar, garantizando el confort y la comodidad. <br><br>
+                
+                Tu opinión es muy importante para nosotros, ya que nos ayuda a mejorar como organización, y por supuesto, podemos mejorar, cambiar e innovar pensando siempre en el bienestar de todos los perritos.
+              </p>
+              <img src="img/porque-adoptar.jpg" alt="" style="flex-wrap: wrap-reverse; width: 100%;">
+            </div>
+          </div>
+
+          <div id ="ContactenosSectionForm" style ="padding: 5%;">
+            <div class="mb-3">
+              <label for="FirstName">Nombres</label>
+              <input type="text" class="form-control" id="FirstName">
+            </div>
+            <div class="mb-3">
+              <label for="LastName">Apellidos</label>
+              <input type="text" class="form-control" id="LastName">
+            </div>
+            <div class="mb-3">
+              <label for="InputEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="InputEmail">
+            </div>
+            <div class="mb-3">
+              <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1">(PQR) - Peticiones, quejas y reclamos</option>
+                <option value="2">Donaciones</option>
+                <option value="3">Recomendaciones</option>
+                <option value="4">Reporta un caso</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="Comentarios" class="form-label">Comentarios</label>
+              <textarea class="form-control" id="Comentarios" rows="3"></textarea>
+            </div>
+            <div class="d-grid gap-5">
+              <button type="button" class="btn btn-success">Enviar</button>
+            </div>
+          </div>
+      </section>
+    </header>
+    <!-- Fin del Formulario y la Imagen de Contactenos -->
+    <!-- Comienzo del Footer -->
+    <%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->
