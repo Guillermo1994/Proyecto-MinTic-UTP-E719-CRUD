@@ -1,0 +1,40 @@
+<%- include('partials/_header') %> <!--Importa el layout header desde partials-->
+<section class="container-fluid content py-5 my-5 ">
+    <div class="row justify-content-center my-5">
+        <!-- Post -->
+        <div class="col-12 col-md-7 text-center">
+            <h1><%= task.nombre %></h1>
+            <hr>
+            <img src="<%= task.foto %>" alt="imagenPrincipal" class="img-fluid" width="40%">
+
+            <p class="text-left mt-3 post-txt">
+                <span><%= task.nombre %></span>
+                <span class="float-right">Raza: <%= task.raza %> Edad: <%= task.edad %> años</span>
+            </p>
+            <p class="text-left">
+                <%= task.perfil %>
+            </p>
+        </div>
+
+        <!-- Entradas recientes -->
+        <div class="col-md-3 offset-md-1">
+            <p>Acciones</p>
+
+             <div class="row mb-4">
+              <button type="button" class="btn btn-success">✓ Adoptar</button>
+                <a href="/adoptar" type="button" class="btn btn-info mb-3">Regresar</a>
+                <!-- <div class="col-4 p-0">
+                    <a href="#">
+                        <img src="img/fotos-mascotas/firulais.jpg" class="img-fluid rounded" width="100" alt="">
+                    </a>
+                </div>
+                <div class="col-7 pl-0">
+                    <a href="#" class="link-post">PHP sigue vivito y coleando</a>
+                </div> -->
+            </div> 
+        </div>
+
+    </div>
+</section>
+
+<%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->

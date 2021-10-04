@@ -1,0 +1,66 @@
+<%- include('partials/_header') %> <!--Importa el layout header desde partials-->
+<div class="container rounded p-5">
+    <!-- <section>
+        <div class="container-xxl rounded bg-light">
+        <p class="fs-5 p-4 title-index">
+          Tenemos las siguientes mascotas disponible para adopción. Puedes usar el cuadro de busqueda para filtrar información, ver informacion adicional de cada mascotas  y en caso de que no encuentres lo que buscas o necesitas mas información de la publicada por favor dejanos un mensaje haciendo clic en el link de la parte inferior.   
+        </p>
+      </div>
+    </section> -->
+    <div class="container-xxl border-radius-x green-bg mt-5 pt-5 ">
+        <p class="fs-5 p-4 title-index" > 
+            Tenemos las siguientes mascotas disponible para adopción. ver informacion adicional de cada mascotas  y en caso de que no encuentres lo que buscas o necesitas mas información de la publicada por favor dejanos un mensaje haciendo clic en el link de la parte inferior.  
+        </p>
+      </div>
+<!--Tabla de mascotas-->
+<div class="row g-3 mb-3 col-md-12">  
+    <h3>Todas las mascotas</h3>      
+    <table class="table align-middle table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">Id</th>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Raza</th>
+                        <th class="text-center">Edad</th>
+                        <th class="text-center">Imagen</th>
+                        <th class="text-center">Perfil</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (var i = 0; i < tasks.length ; i++) { %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= tasks[i].nombre %></td>
+                            <td><%= tasks[i].raza %></td>
+                            <td class="text-center"><%= tasks[i].edad %></td>
+                            <td><a href="<%= tasks[i].foto %>" target="blank"><img class="rounded mx-auto d-block" src="<%= tasks[i].foto %>" height="100"></a></td>
+                            <td><%= tasks[i].perfil %></td>
+                            <td>
+                                <div class="d-grid gap-2">
+                                    <a class="btn <%= tasks[i].status ? 'btn-info' : 'btn-success' %>" 
+                                        href="/turn2/<%= tasks[i]._id %>">
+                                        <%= tasks[i].status ? 'Adoptado' : 'Disponible' %>
+                                    </a>
+                                    </div>
+                                <div class="d-grid gap-2">
+                                <a class="btn btn-warning my-1" href="/perfil/<%= tasks[i]._id %>">Perfil</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    <%}%>
+                </tbody>
+
+            </table>
+
+            <div class="container-xxl border-radius-x green-bg my-4">
+                <p class="text-center fs-5 p-4 listo" > 
+                  <strong>¿Necesitas mas información?</strong> 
+                  <a href="contactenos.html"class="link-index">Envíanos un mensaje a través de este formulario</a>
+                </p>
+              </div>
+
+        </div>
+    </div>
+    <%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->
