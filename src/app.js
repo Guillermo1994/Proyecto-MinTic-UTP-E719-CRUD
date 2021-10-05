@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/crud-mascotas')
 
 //Importing routes
 const indexRoutes = require('./routes/index');
+app.use(express.static('public'));
 
 //Settings
 app.set('port', process.env.PORT || 3000) // Toma puerto de SO, si no existe toma 3000, posteriormente se maneja cmo variable
