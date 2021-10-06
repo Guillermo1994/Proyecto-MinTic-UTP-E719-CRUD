@@ -1,3 +1,97 @@
 body{
     background-color: rgb(209, 241, 241)!important;
 }
+body{
+    background-color: rgb(209, 241, 241)!important;
+    
+}
+
+:root {
+    --sombra-texto: #000;
+    --primario: #54e072;
+    --secundario: #015012;
+    --terciario: #2b723a;
+    --quarter: #58c06f;
+    --fondo-v: #e9f7ec;
+}
+/*Imagenes*/
+.img-mascotas {
+    max-height: 100px;
+}
+
+.img-slider{
+    height: 300px;
+}
+
+.img-portada{
+    max-width: 90%;
+}
+
+/*Textos*/
+.listo, .title{
+    color: var(--primario);
+}
+
+.text-shadow{
+    color: #fff; 
+    text-shadow: var(--sombra-texto) 0.1em 0.1em 0.2em;
+    font-weight: bold;
+}
+
+.text-shadow a{
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: none;
+}
+
+.title-index {
+    color: var(--secundario);
+}
+
+/*Fondo contenedor*/
+.green-bg{
+    background-color: var(--fondo-v);
+}
+
+/*Borde redondeado*/
+.border-radius-x{
+    border-radius: 5px;
+}
+
+.link-index{
+    text-decoration: none;
+    color: var(--terciario);
+    font-weight: none;
+}
+
+.link-index:hover{
+    text-decoration: none;
+    color: var(--quarter);
+    font-weight: none;
+}
+
+.text{
+    width: 28%;
+    text-align: center;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top: 80px;
+}
+.preguntas {
+    width:55%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clearfix{
+    clear:both
+}
+
+
+body{
+    background-color: rgb(209, 241, 241)!important;
+}
+
+.formadm{
+    margin-top: 150px;
+}
