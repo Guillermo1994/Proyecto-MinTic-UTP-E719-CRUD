@@ -13,8 +13,8 @@ router.get('/', async (req, res)=> {
 })
 
 
-//ruta para index 1
-router.get('/src/views/index.ejs', async (req, res)=> {
+//ruta para index
+router.get('/index', async (req, res)=> {
     const tasks = await Task.find();
     //console.log(tasks);
     res.render('index', {
@@ -35,6 +35,14 @@ router.get('/admin', async (req, res)=> {
 router.get('/contactenos', async (req, res)=> {
     const tasks = await Task.find();
     res.render('contactenos', {
+    tasks //tasks: tasks
+    });
+})
+
+//ruta a Contactenos
+router.get('/adoptar', async (req, res)=> {
+    const tasks = await Task.find();
+    res.render('adoptar', {
     tasks //tasks: tasks
     });
 })
