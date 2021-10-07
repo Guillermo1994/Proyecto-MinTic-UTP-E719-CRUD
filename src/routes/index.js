@@ -3,6 +3,12 @@ const router = express.Router();
 
 const Task= require('../models/task')
 
+//Nueva instancia de Body-Parser para el formulario de contactenos
+const bodyParser = require('body-parser')
+const app  = new express()
+
+
+const Usuario = require ( './')
 //Leer desde la base de datos
 router.get('/', async (req, res)=> {
     const tasks = await Task.find();
@@ -38,15 +44,13 @@ router.get('/contactenos', async (req, res)=> {
     tasks //tasks: tasks
     });
 })
-
-//ruta a Contactenos
+//ruta a Adoptar
 router.get('/adoptar', async (req, res)=> {
     const tasks = await Task.find();
     res.render('adoptar', {
     tasks //tasks: tasks
     });
 })
-
 
 //Guardar en base de datos
 router.post('/add', async (req, res)=> { //Recibiendo los datos que vienen desde el formulario
@@ -81,6 +85,7 @@ router.post('/edit/:id', async (req, res) => {
     await Task.updateOne({_id: id}, req.body);
     res.redirect('/admin');
 })
+
 //Borrar
 router.get('/delete/:id', async (req, res) => {
     const {id} = req.params;
@@ -124,6 +129,8 @@ router.get('/turn2/:id', async (req, res) => {
     //console.log(task);
     //res.send('Receidved!')
 });
+
+
 
 
 module.exports = router; // permite exportar para que se lea desde otro lugar

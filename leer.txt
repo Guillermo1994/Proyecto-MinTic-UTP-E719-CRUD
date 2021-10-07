@@ -23,3 +23,6 @@ Conectdo a la base de datos
 Con esto se abre un navegador y se escribe: localhost:3000 ( u otro puerto que indique)
 
 Las imagenes solo funcionan con url, buscar en google y pegar un url de una imagen
+
+Para guardar la información del formualrio de contactenos, es necesario otro install del Node, copiar la siguiente linea en el terminal
+npm install body-parser

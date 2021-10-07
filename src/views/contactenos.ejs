@@ -1,4 +1,6 @@
     <%- include('partials/_header') %> <!--Importa el layout header desde partials-->
+    <br><br><br><br>
+
       <section>
         <div class="container-xxl border-radius-x green-bg my-4">
           <div class="row align-items-start" style="padding: 5%;">
@@ -12,37 +14,39 @@
               <img src="img/porque-adoptar.jpg" alt="" style="flex-wrap: wrap-reverse; width: 100%;">
             </div>
           </div>
-
-          <div id ="ContactenosSectionForm" style ="padding: 5%;">
-            <div class="mb-3">
-              <label for="FirstName">Nombres</label>
-              <input type="text" class="form-control" id="FirstName">
+          <form action="/Ingresar_Cont/Guardar_Cont" method="POST">
+            <div id ="ContactenosSectionForm" style ="padding: 5%;">
+              <div class="mb-3">
+                <label for="FirstName">Nombres</label>
+                <input type="text" class="form-control" id="FirstName" required>
+              </div>
+              <div class="mb-3">
+                <label for="LastName">Apellidos</label>
+                <input type="text" class="form-control" id="LastName" required>
+              </div>
+              <div class="mb-3">
+                <label for="InputEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="InputEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
+                <select class="form-select" aria-label="Default select example" required>
+                  <option value="1">(PQR) - Peticiones, quejas y reclamos</option>
+                  <option value="2">Donaciones</option>
+                  <option value="3">Recomendaciones</option>
+                  <option value="4">Reporta un caso</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="Comentarios" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="Comentarios" rows="3"></textarea>
+              </div>
+              <div class="d-grid gap-5">
+                <button type="button" class="btn btn-success">Enviar</button>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="LastName">Apellidos</label>
-              <input type="text" class="form-control" id="LastName">
-            </div>
-            <div class="mb-3">
-              <label for="InputEmail" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="InputEmail">
-            </div>
-            <div class="mb-3">
-              <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
-              <select class="form-select" aria-label="Default select example">
-                <option value="1">(PQR) - Peticiones, quejas y reclamos</option>
-                <option value="2">Donaciones</option>
-                <option value="3">Recomendaciones</option>
-                <option value="4">Reporta un caso</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="Comentarios" class="form-label">Comentarios</label>
-              <textarea class="form-control" id="Comentarios" rows="3"></textarea>
-            </div>
-            <div class="d-grid gap-5">
-              <button type="button" class="btn btn-success">Enviar</button>
-            </div>
-          </div>
+          </form>
+          
       </section>
     </header>
     <!-- Fin del Formulario y la Imagen de Contactenos -->
