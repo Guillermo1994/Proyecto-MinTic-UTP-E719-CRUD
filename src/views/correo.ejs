@@ -1,0 +1,47 @@
+<%- include('partials/_header') %> <!--Importa el layout footer desde partials-->
+
+<div style="padding-top: 150px; padding-bottom:1% ;">
+    <h1 class="text-center">Bandeja de Entrada</h1>
+</div>
+<div class="container-xxl border-radius-x">
+  
+<table class="table align-middle table-hover" >
+    <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Apellido</th>
+        <th class="text-center">Corre Electrónico</th>
+        <th class="text-center">Asunto</th>
+        <th class="text-center">Comentarios</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < info.length  ; i++) { %>
+        <div >
+          <tr style="height: 100px;">
+            <td ><%= i+1 %></td>
+            <td class="text-center"><%= info[i].nombre %></td>
+            <td class="text-center"><%= info[i].apellido %></td>
+            <td class="text-center"><%= info[i].email %></td>
+            <td class="text-center"><%= info[i].asunto %></td>
+            <td class="text-center" style=" max-width: 400px;"><%= info[i].comentarios %></td>
+            <td>
+              <div class="d-grid gap-2" style="margin: 5px;">
+                <a class="btn <%= info[i].status ? 'btn-info' : 'btn-success' %>" 
+                    href="/turn3/<%= info[i]._id %>">
+                    <%= info[i].status ? 'Leido' : 'No leido' %>
+                </a>
+              </div>
+              <div class="d-grid gap-2">
+                <a class="btn btn-outline-warning" href="/delete2/<%= info[i]._id %>">Borarr</a>
+                </div>
+            </td>
+          </tr>
+        </div>
+      <% } %>
+  </tbody>
+  </table>
+</div>
+<%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->

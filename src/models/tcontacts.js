@@ -1,16 +1,14 @@
 const mongoose = require ('mongoose')
-
 const UsuarioSchema = new mongoose.Schema({
     nombre: String,
     apellido: String,
     email: String,
     asunto: String,
     comentarios: String,
-    creadoEn: {
-        type: Date,
-        default: new Date()
+    status: {
+        type: Boolean,
+        default: false
     }
 })
 
-const Usuario  = mongoose.model('Usuario', UsuarioSchema)
-module.exports = Usuario
+module.exports = mongoose.model('tcontacts', UsuarioSchema)

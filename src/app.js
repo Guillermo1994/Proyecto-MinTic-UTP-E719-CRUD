@@ -6,7 +6,8 @@ const app = express();
 
 //Conecting to db
 mongoose.connect('mongodb://localhost/crud-mascotas')
-    .then(db => console.log('Conectdo a la base de datos'))
+
+    .then(db => console.log('Conectado a la base de datos'))
     .catch(err => console.log('err'));
 
 //Importing routes

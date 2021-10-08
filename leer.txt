@@ -25,4 +25,7 @@ Con esto se abre un navegador y se escribe: localhost:3000 ( u otro puerto que i
 Las imagenes solo funcionan con url, buscar en google y pegar un url de una imagen
 
 Para guardar la información del formualrio de contactenos, es necesario otro install del Node, copiar la siguiente linea en el terminal
-npm install body-parser
+npm i express express-handlebars express-session method-override mongoose passport passport-local connect-flash sweetalert2
+
+Linea que reiniciar el servidor sin necesidad de estar actualizando la pagina
+npm i nodemon -D

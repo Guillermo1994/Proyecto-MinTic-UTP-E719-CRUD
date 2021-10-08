@@ -1,6 +1,6 @@
     <%- include('partials/_header') %> <!--Importa el layout header desde partials-->
     <br><br><br><br>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <section>
         <div class="container-xxl border-radius-x green-bg my-4">
           <div class="row align-items-start" style="padding: 5%;">
@@ -14,23 +14,23 @@
               <img src="img/porque-adoptar.jpg" alt="" style="flex-wrap: wrap-reverse; width: 100%;">
             </div>
           </div>
-          <form action="/Ingresar_Cont/Guardar_Cont" method="POST">
+          <form action="/add2"  name="Formulario" method="post" onsubmit="return validar(event)">
             <div id ="ContactenosSectionForm" style ="padding: 5%;">
               <div class="mb-3">
                 <label for="FirstName">Nombres</label>
-                <input type="text" class="form-control" id="FirstName" required>
+                <input type="text" class="form-control" id="FirstName" name="nombre" required>
               </div>
               <div class="mb-3">
                 <label for="LastName">Apellidos</label>
-                <input type="text" class="form-control" id="LastName" required>
+                <input type="text" class="form-control" id="LastName" name="apellido" required>
               </div>
               <div class="mb-3">
                 <label for="InputEmail" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="InputEmail" required>
+                <input type="email" class="form-control" id="InputEmail" name="email" required>
               </div>
               <div class="mb-3">
                 <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
-                <select class="form-select" aria-label="Default select example" required>
+                <select class="form-select" aria-label="Default select example" name="asunto" required>
                   <option value="1">(PQR) - Peticiones, quejas y reclamos</option>
                   <option value="2">Donaciones</option>
                   <option value="3">Recomendaciones</option>
@@ -39,14 +39,25 @@
               </div>
               <div class="mb-3">
                 <label for="Comentarios" class="form-label">Comentarios</label>
-                <textarea class="form-control" id="Comentarios" rows="3"></textarea>
+                <textarea class="form-control" id="Comentarios" rows="3" name="comentarios" required></textarea>
               </div>
               <div class="d-grid gap-5">
-                <button type="button" class="btn btn-success">Enviar</button>
+                <button type="submit" class="btn btn-success">Enviar</button>
+                <script>
+                  function validar(e) {
+                    swal({
+                        title: "Gracias por contactarnos",
+                        text: "En máximo 3 días hábiles uno de nuestros asesores se contactará con usted.",
+                        icon: "success",
+                      }).then(function () {
+                        document.Formulario.submit();
+                      })
+                      return false;
+                  }
+                </script>
               </div>
             </div>
           </form>
-          
       </section>
     </header>
     <!-- Fin del Formulario y la Imagen de Contactenos -->
