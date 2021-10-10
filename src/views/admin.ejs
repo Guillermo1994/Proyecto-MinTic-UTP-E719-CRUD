@@ -1,34 +1,35 @@
 <%- include('partials/_header-ad') %> <!--Importa el layout header desde partials-->
 
-
-<div class="container" style="padding-top: 150px;">
-    <h3 class="text-center">Administración de mascotas</h3>
-
 <div class="container rounded p-3">
+    
 <!--Formulario de ingreso de informacion a la base de datos-->
-    <div class="container  border-radius-x green-bg p-1">
-        <h3>Formulario para ingreso de información</h3>
-            <form action="/add" method="POST">
-                <div class="col-md-6">
-                    <input type="text" name="nombre" placeholder="Nombre mascota" class="form-control my-1" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="raza" placeholder="Raza" class="form-control my-1" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="edad" placeholder="Edad" class="form-control my-1" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="foto" placeholder="Url Imagen" class="form-control my-1" required>
-                </div>
-                <div class="col-md-6">
-                    <textarea name="perfil" cols="80" placeholder="Perfil" class="form-control my-1" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary my-2">
-                        Agregar 
-                </button>
-            </form>
-    </div>
+<div class="container  border-radius-x green-bg p-1">
+    <h3>Formulario para ingreso de información</h3>
+                    <form action="/add" method="POST">
+                        <div class="col-md-6">
+                            <input type="text" name="nombre" placeholder="Nombre mascota" class="form-control my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="raza" placeholder="Raza" class="form-control my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="genero" placeholder="Genero" class="form-control my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="edad" placeholder="Edad" class="form-control my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="foto" placeholder="Url Imagen" class="form-control my-1">
+                        </div>
+                        <div class="col-md-6">
+                            <textarea name="perfil" cols="80" placeholder="Perfil" class="form-control my-1"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary my-2">
+                               Agregar 
+                        </button>
+                    </form>
+                
+</div>
 
 <!--Fin Formulario-->
 
@@ -41,6 +42,7 @@
                         <th class="text-center">Id</th>
                         <th class="text-center">Nombre</th>
                         <th class="text-center">Raza</th>
+                        <th class="text-center">Genero</th>
                         <th class="text-center">Edad</th>
                         <th class="text-center">Imagen</th>
                         <th class="text-center">Perfil</th>
@@ -53,6 +55,7 @@
                             <td><%= i+1 %></td>
                             <td><%= tasks[i].nombre %></td>
                             <td><%= tasks[i].raza %></td>
+                            <td><%= tasks[i].genero %></td>
                             <td class="text-center"><%= tasks[i].edad %></td>
                             <td><a href="<%= tasks[i].foto %>" target="blank"><img class="rounded mx-auto d-block" src="<%= tasks[i].foto %>" height="100"></a></td>
                             <td><%= tasks[i].perfil %></td>

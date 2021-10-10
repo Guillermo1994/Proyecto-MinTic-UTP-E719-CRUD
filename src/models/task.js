@@ -5,6 +5,7 @@ const Scheme = mongoose.Schema;
 const TaskSchema = new mongoose.Schema({
     nombre: String,
     raza: String,
+    genero: String,
     edad: String, // Pense que era numero, pero me sale error, toca String
     foto: String,
     perfil: String,

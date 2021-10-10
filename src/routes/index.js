@@ -56,7 +56,7 @@ router.get('/adoptar', async (req, res)=> {
 router.post('/add', async (req, res)=> { //Recibiendo los datos que vienen desde el formulario
 const task = new Task(req.body);
     await task.save();
-    res.redirect('/');
+    res.redirect('/admin');
     //res.send('received');
 })
 
