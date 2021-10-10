@@ -1,8 +1,7 @@
 <%- include('partials/_header') %> <!--Importa el layout header desde partials-->
 
-<section>
-      
-    <div id="carouselExampleCaptions" class="carousel slide pt-5 mt-5" data-bs-ride="carousel">
+<section >
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -15,7 +14,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-shadow">Decide compartir tu vida con una mascota</h2>
             <h3 class="text-shadow">No te sentirás solo jamás y nunca terminarás de sorprenderte! 
-            <a href="mascotas.html" class="text-shadow">¡Te están esperando!</a></h3>
+            <a href="adoptar" class="text-shadow">¡Te están esperando!</a></h3>
           </div>
         </div>
         <div class="carousel-item">
@@ -23,7 +22,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-shadow">Van a donde tu vayas</h2>
             <h3 class="text-shadow">Si estás listo para esta desición 
-            <a href="mascotas.html" class="text-shadow">¡Aqui esta tu proximo amigo!</a></h3>
+            <a href="adoptar" class="text-shadow">¡Aqui esta tu proximo amigo!</a></h3>
           </div>
         </div>
         <div class="carousel-item">
@@ -31,7 +30,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-shadow">Están a la espera de una familia</h2>
             <h3 class="text-shadow">Tu casa podria ser su hogar 
-            <a href="mascotas.html" class="text-shadow">¡Saludalos aquí!</a></h3>
+            <a href="adoptar" class="text-shadow">¡Saludalos aquí!</a></h3>
           </div>
         </div>
         <div class="carousel-item">
@@ -39,7 +38,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-shadow">Pueden ser tiernos, divertidos y leales</h2>
             <h3 class="text-shadow">Se acomodan facil a tu espacio disponible
-            <a href="mascotas.html" class="text-shadow">¡Conócelos!</a></h3>
+            <a href="adoptar" class="text-shadow">¡Conócelos!</a></h3>
           </div>
         </div>
       </div>
@@ -57,17 +56,11 @@
   <!--Fin Slider-->
 
 <!--Seccion nosotros-->
-<br id="nosotros">
-<br>
-<br>
-<br>
-<br>
-<br>
-  <section>
+  <section id="nosotros" class="margin-id">
     <div class="container-xxl border-radius-x green-bg my-4">
       
       <h2 class="text-center title-index py-4 display-4">¿Quiénes sómos?</h2>
-      <p class="fs-5 p-4">
+      <p class="fs-4 p-4">
         Somos una organizacion sin animo de lucro que busca ante todo contribuir al binestar de los animales, para esto llevamos a cabo campañas de busqueda y rescate, busqueda de hogares y seguimiento para los animales una vez que son adoptados. Nos financiamos del apoyo económico de las empresas publicas y privadas que conrtibuyen grandemente a esta labor.         
       </p>
 
@@ -89,20 +82,15 @@
   </div>
 </section>
 <!--Fin seccion Nosotros-->
-<br id="adoptar">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <!--Seccion adoptar-->
-<div class="container-xxl" id="containeradopta">
+<section id="adoptar" class="margin-id">
+<div class="container-xxl my-4">
   <div class="row" id="tabla">
     <div class="text col-xl-6">
       <h2><strong class="listo">¿Estás list@?</strong></h2>
       <h2><strong>Antes de aplicar</strong></h2>
-      <p class="fs-5 p-4">Si estas interesado en adoptar a alguno de nuestros peluditos, debes leer con detenimiento cada una de las siguientes preguntas</p>
+      <p class="fs-5 ">Si estas interesado en adoptar a alguno de nuestros peluditos, debes leer con detenimiento cada una de las siguientes preguntas</p>
     </div>
     <div class="preguntas col-xs-6">
       <div class="accordion" id="accordionExample">
@@ -169,13 +157,25 @@
     </div>
     <div class="clearfix"></div>
     <div class="container-xxl border-radius-x green-bg my-4">
-      <p class="text-center fs-5 p-4 listo" > 
-        <strong>¿Estás listo?</strong> <a href="/adoptar"class="link-index">Clic para ver mascotas disponibles          
+      <p class="text-center fs-3 p-4 listo" > 
+        <strong>¿Estás listo?</strong> <a href="/adoptar"class="link-index">Aquí puedes ver las mascotas disponibles          
         </a>
       </p>
     </div>
   </div>
 </div>
+</section>
     <!--Fin seccion adoptar-->
-
+<!--Boton Whastapp-->
+<div class="btn-whatsapp">
+ <a href="https://api.whatsapp.com/send?phone=5711234567" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+</div>
+<!--Fin boton whatsapp-->
+<div class="btn-up" id="btn-up">
+  <a href="#top-page">
+  <i class="bi bi-arrow-up-circle-fill"></i>
+</a>
+</div>
 <%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->
