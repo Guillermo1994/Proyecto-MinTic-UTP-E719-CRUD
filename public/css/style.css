@@ -1,11 +1,3 @@
-body{
-    background-color: rgb(209, 241, 241)!important;
-}
-body{
-    background-color: rgb(209, 241, 241)!important;
-    
-}
-
 :root {
     --sombra-texto: #000;
     --primario: #54e072;
@@ -13,6 +5,8 @@ body{
     --terciario: #2b723a;
     --quarter: #58c06f;
     --fondo-v: #e9f7ec;
+    --fondo-nav: #135321;
+    --blue-c: #fcf9f9; /*rgb(209, 241, 241)*/
 }
 /*Imagenes*/
 .img-mascotas {
@@ -27,6 +21,9 @@ body{
     max-width: 90%;
 }
 
+.img-logo {
+    max-width: 5em;;
+}
 /*Textos*/
 .listo, .title{
     color: var(--primario);
@@ -48,9 +45,32 @@ body{
     color: var(--secundario);
 }
 
+.footer-title {
+    color: var(--blue-c);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-a{
+    color: var(--blue-c);
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-li{
+    list-style-type: none;
+}
+
 /*Fondo contenedor*/
 .green-bg{
     background-color: var(--fondo-v);
+}
+
+.bg-nav {
+    background-color: var(--fondo-nav);
+    opacity: .9;
+
 }
 
 /*Borde redondeado*/
@@ -79,7 +99,7 @@ body{
 }
 .preguntas {
     width:55%;
-    margin-top: 100px;
+    margin-top: 5em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -89,9 +109,74 @@ body{
 
 
 body{
-    background-color: rgb(209, 241, 241)!important;
+    background-color: var(--blue-c)!important;
 }
 
 .formadm{
     margin-top: 150px;
+}
+
+/*Margen para id*/
+.margin-id{
+    margin-top: 150px;
+}
+
+/*Boton whastapp*/
+.btn-whatsapp {
+    display:block;
+    width:60px;
+    height:60px;
+    color: #ffffff;
+    position: fixed;
+    right:20px;
+    bottom:20px;
+    border-radius:50%;
+    line-height:80px;
+    text-align:center;
+    z-index:999;
+    opacity: .8;
+    font-size: 3em;
+}
+
+.btn-whatsapp:hover{
+    opacity: 1;
+}
+
+.btn-up {
+    display:block;
+    width:60px;
+    height:60px;
+    position: fixed;
+    right:80px;
+    bottom:20px;
+    line-height:80px;
+    text-align:center;
+    z-index:999;
+    opacity: 1;
+    font-size: 3em;
+}
+
+.btn-up a{
+    color: rgb(221, 156, 14);
+}
+
+.btn-whatsapp a{
+    color:#2b940b;
+}
+
+/*Botones redes sociales*/
+
+.btn-facebook{
+    color: #3b5998;
+    font-size: 2em;
+}
+
+.btn-twitter{
+    color: #00acee;
+    font-size: 2em;
+}
+
+.btn-instagram{
+    color: #3f729b;
+    font-size: 2em;
 }

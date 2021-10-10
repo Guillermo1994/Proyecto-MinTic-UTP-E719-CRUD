@@ -5,10 +5,9 @@ const mongoose = require ('mongoose')
 const app = express();
 
 //Conecting to db
-mongoose.connect('mongodb://localhost/crud-mascotas')
-
-    .then(db => console.log('Conectado a la base de datos'))
-    .catch(err => console.log('err'));
+mongoose.connect('mongodb+srv://ilmero:asdfg1234@cluster0.7kf1h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+   .then(db => console.log('Conectado a la base de datos'))
+   .catch(err => console.log('Error conectandose a la base de datos'));
 
 //Importing routes
 const indexRoutes = require('./routes/index');
