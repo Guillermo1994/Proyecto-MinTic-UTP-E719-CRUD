@@ -6,7 +6,7 @@
     --quarter: #58c06f;
     --fondo-v: #e9f7ec;
     --fondo-nav: #135321;
-    --blue-c: #fcf9f9; /*rgb(209, 241, 241)*/
+    --blue-c: #fcf9f9;
 }
 /*Imagenes*/
 .img-mascotas {
@@ -75,7 +75,7 @@
     list-style-type: none;
 }
 
-/*Fondo contenedor*/
+/*Fondos*/
 .green-bg{
     background-color: var(--fondo-v);
 }
@@ -83,7 +83,10 @@
 .bg-nav {
     background-color: var(--fondo-nav);
     opacity: .9;
+}
 
+.bg-widget-footer {
+    background-color: var(--terciario);
 }
 
 /*Borde redondeado*/
