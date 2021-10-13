@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const router = express.Router();
 const Task= require('../models/task')
 const Infocon = require('../models/tcontacts')
@@ -18,6 +19,52 @@ router.get('/', async (req, res)=> {
     });
 })
 
+//Ruta para registro de usuario
+router.get('/signup', (req, res, next) =>{
+    res.render('signup')
+})
+
+router.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/admin',
+    failureRedirect: '/signup',
+    passReqToCallback: true
+}))
+
+//Ruta para inicio de sesión
+router.get('/signin', (req, res, next) =>{
+    res.render('signin')
+})
+
+router.post('/signin', passport.authenticate('local-signin', {
+    successRedirect: '/admin',
+    failureRedirect: '/signin',
+    passReqToCallback: true
+}))
+
+//ruta para cerrar sesión
+router.get('/logout', (req, res, next)=>{
+    req.logout()
+    res.redirect('/')
+})
+
+//ruta a admin
+router.get('/admin', isAuthenticated,async (req, res)=> {
+    const tasks = await Task.find();
+    const info =  await Infocon.find();
+    //console.log(tasks);
+    res.render('admin', {
+    tasks,info //tasks: tasks 
+    });
+})
+
+//Función para que no se pueda acceder a admin sin iniciar sesión o poniendo la ruta en la barra de busqueda
+function isAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next()
+    }
+    res.redirect('/')
+}
+
 //ruta para index
 router.get('/index', async (req, res)=> {
     const tasks = await Task.find();
@@ -28,15 +75,7 @@ router.get('/index', async (req, res)=> {
 })
 
 
-//ruta a admin
-router.get('/admin', async (req, res)=> {
-    const tasks = await Task.find();
-    const info =  await Infocon.find();
-    //console.log(tasks);
-    res.render('admin', {
-    tasks,info //tasks: tasks 
-    });
-})
+
 
 //ruta a Contactenos
 router.get('/contactenos', (req, res)=> {
