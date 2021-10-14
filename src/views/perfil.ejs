@@ -20,20 +20,67 @@
             <p></p>
 
              <div class="row mb-4">
-              <button type="button" class="btn btn-success mb-3">✓ Adoptar</button>
+              <!-- <button type="button" class="btn btn-success mb-3">✓ Adoptar</button> -->
                 <a href="/adoptar" type="button" class="btn btn-info mb-3">Regresar</a>
-                <!-- <div class="col-4 p-0">
-                    <a href="#">
-                        <img src="img/fotos-mascotas/firulais.jpg" class="img-fluid rounded" width="100" alt="">
-                    </a>
-                </div>
-                <div class="col-7 pl-0">
-                    <a href="#" class="link-post">PHP sigue vivito y coleando</a>
-                </div> -->
+
             </div> 
         </div>
-
     </div>
 </section>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <section>
+        <div class="container-xxl border-radius-x green-bg ">
+          <div class="row align-items-start ">
+            <div class="col">
+              <h3 class="text-center py-2">Llena los Prerrequisitos para la adopción</h3>
+              <p class="fs-6 p-3">
+                Si estas seguro y deseas adoptar este hermoso animal llena el siguiente formulario y nos contactaremos contigo
+              </p>
+              <img src="img/porque-adoptar.jpg" alt="" style="flex-wrap: wrap-reverse; width: 100%;">
+            </div>
+          </div>
+          <form action="/add3"  name="Formulario" method="post" onsubmit="return validar(event)">
+            <div id ="ContactenosSectionForm" style ="padding: 2em;">
+              <div class="mb-3">
+                <label for="FirstName">Nombres</label>
+                <input type="text" class="form-control" id="FirstName" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="LastName">Apellidos</label>
+                <input type="text" class="form-control" id="LastName" name="apellido" required>
+              </div>
+              <div class="mb-3">
+                <label for="InputEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="InputEmail" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
+                <select class="form-select" aria-label="Default select example"  hidden name="asunto" required>
+                  <option value="Adoptar">Adoptado</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="Comentarios" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="Comentarios" rows="3" name="comentarios" required></textarea>
+              </div>
+              <div class="d-grid gap-5">
+                <button type="submit" class="btn btn-success">✓ Adoptar</button>
+                <script>
+                  function validar(e) {
+                    swal({
+                        title: "Gracias por Adoptarme te lo adradecere",
+                        text: "En máximo 3 días hábiles uno de nuestros asesores se contactará con usted.",
+                        icon: "success",
+                      }).then(function () {
+                        document.Formulario.submit();
+                      })
+                      return false;
+                  }
+                </script>
+              </div>
+            </div>
+          </form>
+      </section>
 
 <%- include('partials/_footer') %> <!--Importa el layout footer desde partials-->

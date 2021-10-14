@@ -150,6 +150,12 @@ router.post('/perfil/:id', async (req, res) => {
     res.redirect('/adoptar');
 });
 
+router.post('/add3', async (req,res)=>{
+    const info = new Infocon(req.body);
+    await info.save();
+    res.redirect('/adoptar'); //Recargar la pagina
+})
+
 //Boton Done2
 router.get('/turn2/:id', async (req, res) => {
     const {id} = req.params;
