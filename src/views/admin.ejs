@@ -26,9 +26,10 @@
         <nav class="navbar navbar-dark bg-nav">
             <div class="container">
               <a class="navbar-brand" href="/"><i class="bi bi-arrow-90deg-left"></i> Inicio</a>
-              <h1 class="text-light">Adopción de mascotas</h1>
+              <h1 class="text-light">Administrador</h1>
               <form class="d-flex">
-                <a class="navbar-brand" href="/logout">Cerrar Sesión</a>
+                <a class="navbar-brand" href="/signup"><i class="bi bi-person-plus"></i></a>
+                <a class="navbar-brand" href="/logout"> Cerrar Sesión</a>
               </form>
             </div>
           </nav>
@@ -60,7 +61,7 @@
                             <textarea name="perfil" cols="80" placeholder="Perfil" class="form-control my-1"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary my-2">
-                               Agregar 
+                               Agregar registro
                         </button>
                     </form>
                 
@@ -137,6 +138,6 @@
               </button>
         </p>
     </form>
-  </div>    
+    </div>    
 </div>
 <%- include('partials/_footer') %> <!--Importa el layout header desde partials-->
